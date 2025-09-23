@@ -16,7 +16,7 @@ function App() {
     <>
       <section className="first-section">
         <div className="video-background">
-          <video autoPlay muted loop playsInline poster="/fallback.jpg">
+          <video autoPlay muted loop playsInline poster="./assests/trama/trama1.png">
             <source src={maevaVideo} type="video/mp4" />
           </video>
         </div>

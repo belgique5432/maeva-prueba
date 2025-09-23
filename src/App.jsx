@@ -24,7 +24,7 @@ function App() {
           <img src={maevaLogo} alt="maeva-logo" width="60%" className="maeva-logo-sm" />
           <h1>Bienvenido a tu próximo destino</h1>
           <p className="title-text">No solo organizamos viajes, creamos experiencias que dejan huella</p>
-          <img src={arrow} alt="flecha" width="7%" className="arrow" />
+          <img src={arrow} alt="flecha" width="22px" height="87px" className="arrow" />
         </div>
       </section>
       <section>

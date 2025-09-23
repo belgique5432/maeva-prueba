@@ -1,5 +1,5 @@
 import "./App.css";
-import maevaVideo from "./assets/video/maeva_web.mp4";
+import maevaVideo from "./assets/video/maeva_web_ios.mp4";
 import maevaLogo from "./assets/logos/maeva-white.png";
 import arrow from "./assets/iconos/down-arrow.png";
 import maevaNosotros from "./assets/logos/bitmap.png";
@@ -16,7 +16,7 @@ function App() {
     <>
       <section className="first-section">
         <div className="video-background">
-          <video autoPlay muted loop playsInline poster="./assests/trama/trama1.png">
+          <video autoPlay muted loop playsInline  webkit-playsinline="true" poster="./assests/trama/trama1.png">
             <source src={maevaVideo} type="video/mp4" />
           </video>
         </div>

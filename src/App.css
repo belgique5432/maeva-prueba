@@ -1,0 +1,831 @@
+#root {
+  text-align: center;
+  line-height: 1.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope";
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+input[type="radio"] {
+  appearance: none; /* Oculta el estilo nativo */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc; /* Color del círculo estático */
+  border-radius: 50%;
+  position: relative;
+  border-color: #582707;
+}
+
+input[type="radio"]:checked {
+  border-color: #582707; /* Cambia el borde al estar seleccionado */
+}
+
+input[type="radio"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #582707; /* Color del punto/relleno */
+  border-radius: 50%;
+}
+
+/* Oculto los radios */
+.radio-fecha {
+  display: none;
+}
+
+/* Estilos base para los labels (botones) */
+.year {
+  margin-left: -5px;
+}
+
+.select-mes {
+  width: 95%;
+  padding: 5px;
+}
+
+.year label {
+  display: inline-block;
+  padding: 2px 15px;
+  margin:5px;
+  border: 1px solid brown;
+  border-radius: 6px;
+  background-color: #fce9d6; /* mismo tono que tu fondo */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 109px;
+  text-align: center;
+}
+
+.year label input {
+  display: none;
+}
+
+/* Cuando el radio está seleccionado */
+.radio-fecha:checked + label {
+  background-color: #CEDDFF;
+  color: #582707;
+}
+
+
+body {
+  background-color: #CEDDFF;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: "Archivo";
+  font-weight: 900;
+}
+
+h2 {
+  font-family: "Archivo";
+}
+
+.video-background {
+  position: absolute; /* Para que se quede de fondo */
+  top: 0;
+  left: 0;
+  width:100%;
+  overflow: hidden;
+  z-index: -1; /* Queda detrás del contenido */
+  height: 100%;
+}
+
+.video-background-desktop {
+  position: fixed; /* Para que se quede de fondo */
+  top: 0;
+  left: 0;
+  width:100%;
+  overflow: hidden;
+  z-index: -1; /* Queda detrás del contenido */
+  height: 100%;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que el video cubra todo el fondo */
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  z-index: 1; /* Encima del video */
+  color: white;
+  text-align: center;
+  margin-top: 20%;;
+  padding: 10%
+}
+
+.contenido h1 {
+  margin-top: 20%;
+  font-family: "Archivo";
+}
+
+
+.maeva-logo-sm {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  max-width: 171px;
+}
+
+.title-text {
+  font-size: 24px;
+  margin-top: 10%;
+  font-weight: bolder;
+}
+
+.arrow {
+  align-self: center;
+  margin-top: 10%;
+}
+
+.formulario-contacto-desktop {
+  display: flex;
+  gap: 10%;
+  max-width: 100%;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid #582707;
+  border-radius: 3px;
+  height: 36px;
+
+}
+
+input::placeholder{
+  padding: 5%;
+  color: #582707;
+  opacity: 80%;
+}
+
+select {
+  background-color: transparent;
+  border: 1px solid #582707;
+  border-radius: 3px;
+  color: #582707;
+  margin-top: 5%;
+}
+
+textarea {
+  background-color: transparent;
+  border: 1px solid #582707;
+  border-radius: 3px;
+}
+
+textarea::placeholder{
+    padding: 2%;
+  color: #582707;
+  opacity: 80%;
+}
+
+.form-desktop {
+  background-color:#FFEEDD ;
+  color: #582707;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 5%;
+  padding-top: 2%;
+  margin-top:6%;
+  border-radius: 5px;
+  padding-bottom: 2%;
+}
+
+.form-desktop-subtitle {
+  margin-top:5%;
+  width: 60%;
+  font-size: 20px;
+}
+
+.contenido-desktop {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 80%;
+  gap: 5%;
+  padding-left: 8%;
+  padding-top: 2%;
+}
+
+.contenido-desktop input{
+  max-width: 270px;
+  margin-right: 5%;
+}
+
+.contenido-desktop-text {
+  max-width: 80%;
+  text-align: left;
+}
+
+.contenido-desktop-text h1 {
+  margin-top: 10%;
+  font-size: 50px;
+}
+
+
+.anio{
+  margin-left:1% ;
+}
+.margen-top {
+  margin-top: 20%;
+}
+
+.margen-top-destino {
+  margin-top: 15%;
+}
+
+.margen-top-fecha-desk{
+  margin-top: 5%;
+}
+
+.margen-top-consulta {
+  margin-top: 3%;
+  height: 5rem;
+}
+
+.telefono-form-desktop {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.metodo-preferencia-desktop{
+  margin-top: 10%;
+}
+
+.metodo-de-preferencia {
+  display: flex;
+  justify-content:flex-start ;
+  width: 80%;
+  gap: 20%;
+  margin-top: 2%;
+  font-size: 16px;
+}
+
+.boton-enviar-form-desktop {
+  margin-top: 5%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.boton-enviar-form-desktop button {
+    text-decoration: none;
+  background-color: #F26027;
+  border: none;
+  padding: 3%;
+  border-radius: 5px;
+  width: 100px;
+}
+
+
+.mobile-form {
+  margin-top: 15%;
+  background-color: #FF5200;
+  padding: 10%;
+}
+
+.form-background {
+  background-color: #FFECDB;
+  color: #582707;
+  padding: 10%;
+  padding-top: 5%;
+}
+
+.form-container {
+  text-align: left;
+}
+
+.form-input {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.metodo-preferencia-mobile {
+  display: flex;
+  gap: 30%;
+  margin-top: 10%;
+}
+
+.metodo-preferencia-mobile-text {
+  display: flex;
+  gap: 1rem;
+}
+
+.consulta-mobile {
+  margin-top: 5%;
+  width: 100%;
+  height: 105px;
+}
+
+.left {
+  text-align: left;
+}
+
+.nosotros-mobile {
+  background-color: #FFECDB;
+  color: #582707;
+  padding: 10%;
+  text-align: left;
+}
+
+.nosotros-mobile p {
+  margin-top: 10%;
+}
+
+.nosotros-mobile span {
+  font-weight: bold;
+}
+
+.nosotros-desktop {
+  background-color: #FFECDB;
+  color: #582707;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  padding: 10%;
+  padding-top: 5%;
+  margin-top: 10%;
+  flex-wrap: wrap;
+}
+
+.nosotros-desktop p {
+  margin-top: 5%;
+}
+
+.nosotros-desktop span {
+  font-weight: bold;
+}
+
+.nosotros-desktop-text {
+  max-width: 480px;
+}
+
+.maeva-nosotros-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  flex-wrap: wrap;
+}
+
+.elegirnos {
+  background-image: url("./assets/trama/trama1.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 5%;
+  text-align: left;
+}
+
+.elegirnos div {
+  background-color: #FFECDB;
+  color: #582707;
+  padding: 10%;
+}
+
+.elegirnos p {
+  margin-top: 10%;
+}
+
+.strong-elegirnos {
+  font-weight: bold;
+}
+
+.button-enviar {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px;
+    width: 220px;
+    background-color: #FF5200;
+    border-radius: 5px;
+    border: none;
+}
+
+.elegirnos-desktop{
+  background-image: url("./assets/trama/trama1.jpg");
+  background-position: center;
+  background-size:contain;
+  background-repeat: repeat;
+  padding: 5%;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+}
+
+.elegirnos-desktop h2 {
+  margin-left: 13%;
+}
+
+.father-container {
+  background-color: #FFECDB;
+  color: #582707;
+  padding: 5%;
+  width: 80%;
+}
+
+.elegirnos-desktop p {
+  margin-top: 5%;
+}
+
+.elegirnos-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.elegirnos-container-text {
+  width: 30%;
+}
+
+.bienvenido {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 16px;
+  }
+  .formulario-contacto-desktop {
+    display: none;
+  }
+
+  .desktop-view-main {
+    display: none;
+  }
+
+  .nosotros-desktop {
+    display: none;
+  }
+
+    .elegirnos-desktop{
+    display: none;
+  }
+
+  input[type="radio"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  background-color: #582707; /* Color del punto/relleno */
+  border-radius: 50%;
+}
+
+input[type="radio"] {
+  appearance: none; /* Oculta el estilo nativo */
+  width: 25px;
+  height: 25px;
+  border: 2px solid #ccc; /* Color del círculo estático */
+  border-radius: 50%;
+  position: relative;
+  border-color: #582707;
+}
+
+
+  .year label {
+  display: inline-block;
+  padding: 2px 25px;
+  border: 1px solid brown;
+  border-radius: 6px;
+  background-color: #fce9d6; /* mismo tono que tu fondo */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 46.3%;
+  margin-top: 10px;
+}
+.select-mes {
+  width: 100%;
+  padding: 5px;
+}
+}
+
+.mundi {
+  background-color: #CEDDFF;
+  color: #582707;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: left;
+  padding: 5%;
+}
+
+.mundi h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+
+.mundi p {
+  font-size: 20px;
+}
+
+.mundi img {
+  background-color: #CEDDFF;
+  margin-top: 10%;
+}
+
+.mundi-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.form-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+label input {
+  width: 100%;
+}
+
+.consulta-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mundi button {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 7px;
+    background-color: #FF5200;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+
+
+
+/* Pantallas medianas: tablets (641px a 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .arrow {
+    display:none;
+  }
+
+  .desktop-view-main {
+    display: none;
+  }
+
+  .mobile-form {
+    display: none;
+  }
+  .nosotros-mobile {
+    display: none;
+  }
+  .elegirnos-desktop{
+    display: none;
+  }
+
+
+}
+
+footer {
+  margin-top: 100%;
+  background-color: #F26027;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.footer-maeva {
+  width: 50%;
+  display: flex;
+  justify-self: left;
+}
+
+footer img{
+  width: 10%;
+}
+
+footer div {
+  text-align: left;
+  margin-left: 5%;
+}
+
+footer div p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 5%;
+}
+
+footer ul li{
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  margin-left: 3%;
+}
+
+.footer-contacto{
+  margin-top: 10%;
+}
+
+.footer-redes {
+  margin-top: 10%;
+}
+
+
+
+.container input {
+  width: 25px;
+}
+
+
+.checkbox-telefono {
+  font-size: 16px;
+}
+
+
+/* Posición */
+.swiper-button-prev {
+
+  top: 100;
+}
+.swiper-button-next {
+  right:500px; /* mover más a la derecha */
+}
+
+/* Fondo circular con hover */
+
+
+.servicios-desktop {
+  background-color: #FFECDB;
+  color: #582707;
+  padding: 5%;
+}
+
+.servicios-desktop h2 {
+  margin-bottom: 5%;
+}
+
+.servicios-desktop div h2 {
+  margin-bottom: 5%;
+}
+
+
+.btn-prev, .btn-next {
+  margin-top: 10px;
+  background-color: #FFECDB;
+  text-decoration: none;
+  border: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.custom-prev, .custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 18px;
+}
+
+.card-image {
+  max-width: 90%;
+}
+
+.custom-prev {
+  left: 10px;
+}
+
+.custom-next {
+  right: 10px;
+}
+
+.custom-prev:hover, .custom-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Pantallas grandes: desktop (1025px en adelante) */
+@media (min-width: 1025px) {
+.first-section {
+  display: none;
+}
+* {
+  font-size: 20px;
+}
+
+.mobile-form {
+  display: none;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.nosotros-mobile{
+  display: none;
+}
+
+.elegirnos {
+  display: none;
+}
+
+.mundi {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mundi-button {
+  justify-content: left;
+}
+
+.mundi img {
+  width: 500px;
+}
+
+.mundi-parte-1 {
+  width: 500px;
+}
+
+footer {
+  margin-top: 0%;
+  flex-direction: row;
+  justify-content:center;
+  height: 220px;
+  padding: 3%;
+}
+
+footer img {
+  width: 10%;
+}
+
+.maeva-footer{
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-maeva {
+  width: 335px;
+}
+
+.footer-contacto {
+  width: 300px;
+  margin-top: 0px;
+}
+
+.footer-redes {
+  width: 300px;
+  margin-top: 0px;
+}
+}
+
+
+@media (min-width: 1300px) {
+  .form-desktop {
+    margin-left: 20%;
+  }
+  .contenido-desktop-text h1{
+    margin-top: 10%;
+    width: 400px;
+  }
+
+  
+}

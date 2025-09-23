@@ -17,7 +17,7 @@ import alquilerAutos from "../assets/carousel/alquilerdeautos.png"
 import bodas from "../assets/carousel/bodas.png"
 import lunasdemiel from "../assets/carousel/lunasdemiel.png"
 import traslados from "../assets/carousel/traslados.png"
-import eventosDeportivos from "../assets/carousel/eventosDeportivos.png"
+import eventosDeportivos from "../assets/carousel/eventosdeportivos.png"
 
 export default function ServiciosCarousel() {
   return (

@@ -18,6 +18,7 @@ import bodas from "../assets/carousel/bodas.png"
 import lunasdemiel from "../assets/carousel/lunasdemiel.png"
 import traslados from "../assets/carousel/traslados.png"
 import eventosDeportivos from "../assets/carousel/eventosdeportivos.png"
+import asistenciaalviajero from "../assets/carousel/asistenciaalviajero.png"
 
 export default function ServiciosCarousel() {
   return (
@@ -70,6 +71,9 @@ export default function ServiciosCarousel() {
         </SwiperSlide>
         <SwiperSlide>
           <img src={eventosDeportivos} alt="eventos-deportivos" className="card-image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={asistenciaalviajero} alt="asistencia-al-viajero" className="card-image" />
         </SwiperSlide>
       </Swiper>
       <button className="btn-prev"><img src={back} alt="" width="50px"/></button>

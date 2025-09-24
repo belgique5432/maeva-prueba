@@ -10,6 +10,12 @@
   font-family: "Manrope";
 }
 
+.mundi-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
 html, body, #root {
   height: 100%;
   width: 100%;
@@ -55,6 +61,14 @@ input[type="radio"]:checked::before {
   padding: 5px;
 }
 
+.btn-prev {
+  max-width: 40px;
+}
+
+.btn-next {
+  max-width: 40px;
+}
+
 .year label {
   display: inline-block;
   padding: 2px 15px;
@@ -74,8 +88,15 @@ input[type="radio"]:checked::before {
 
 /* Cuando el radio está seleccionado */
 .radio-fecha:checked + label {
-  background-color: #CEDDFF;
+  background-color: #582707;
+  color: #fce9d6;
+}
+
+
+
+textarea {
   color: #582707;
+  resize: none;
 }
 
 
@@ -165,7 +186,7 @@ input {
   border-radius: 3px;
   height: 36px;
   color: #582707;
-
+  padding-left: 5px;
 }
 
 input::placeholder{
@@ -186,13 +207,11 @@ textarea {
   background-color: transparent;
   border: 1px solid #582707;
   border-radius: 3px;
+  padding-left: 10px;
+  padding-top: 5px;
 }
 
-textarea::placeholder{
-    padding: 2%;
-  color: #582707;
-  opacity: 80%;
-}
+
 
 .form-desktop {
   background-color:#FFEEDD ;
@@ -477,11 +496,14 @@ textarea::placeholder{
     font-size: 16px;
   }
 
+  .mundi-button-desktop {
+    display: none;
+  }
+
+
   .footer-maeva {
   max-width: 173px;
 }
-
-
   .formulario-contacto-desktop {
     display: none;
   }
@@ -563,11 +585,6 @@ input[type="radio"] {
   margin-top: 10%;
 }
 
-.mundi-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 5%;
-}
 
 .form-columns {
   display: grid;
@@ -602,6 +619,14 @@ label input {
     display:none;
   }
 
+    .mundi-button-mobile {
+    display: none;
+  }
+
+  .mundi-button-desktop {
+    display: flex;
+  }
+
   .desktop-view-main {
     display: none;
   }
@@ -617,10 +642,6 @@ label input {
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1400px) {
-
-
-}
 
 footer {
   margin-top: 70%;
@@ -761,6 +782,14 @@ a{
 .first-section {
   display: none;
 }
+
+    .mundi-button-mobile {
+    display: none;
+  }
+
+  .mundi-button-desktop {
+    display: flex;
+  }
 
 
 * {

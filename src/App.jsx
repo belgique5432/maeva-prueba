@@ -48,7 +48,7 @@ function App() {
                   Creamos experiencias que dejan huella
                 </p>
               </div>
-              <section className="form-desktop" id="form">
+              <section className="form-desktop" id="form-desktop">
   <h2>Empecemos a planificar tu viaje</h2>
   <p className="form-desktop-subtitle">
     Dejanos tus datos a continuación y nos pondremos en contacto a la brevedad.
@@ -430,7 +430,10 @@ function App() {
         <div className="mundi-parte-1">
           <h2>te llevamos A donde quieras ir </h2>
           <p>El mundo al alcance de tus manos.</p>
-          <div className="mundi-button">
+          <div className="mundi-button mundi-button-desktop">
+          <button><a href="#form-desktop">Viajá con nosotros</a></button>
+          </div>
+          <div className="mundi-button mundi-button-mobile">
           <button><a href="#form">Viajá con nosotros</a></button>
           </div>
         </div>

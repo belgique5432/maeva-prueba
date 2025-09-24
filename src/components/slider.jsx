@@ -76,8 +76,8 @@ export default function ServiciosCarousel() {
           <img src={asistenciaalviajero} alt="asistencia-al-viajero" className="card-image" />
         </SwiperSlide>
       </Swiper>
-      <button className="btn-prev"><img src={back} alt="" width="50px"/></button>
-      <button className="btn-next"><img src={go} alt="" width="50px"/></button>
+      <button className="btn-prev"><img src={back} alt="" width="100%"/></button>
+      <button className="btn-next"><img src={go} alt="" width="100%"/></button>
     </section>
   );
 }

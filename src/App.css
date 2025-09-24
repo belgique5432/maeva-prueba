@@ -198,13 +198,17 @@ textarea::placeholder{
   background-color:#FFEEDD ;
   color: #582707;
   display: flex;
+  flex-shrink: 1;
   flex-direction: column;
   text-align: left;
   padding: 5%;
   padding-top: 2%;
   margin-top:6%;
+  margin-right: 5%;
   border-radius: 5px;
   padding-bottom: 2%;
+  max-width: 738px;
+  margin-left:0px;
 }
 
 .form-desktop-subtitle {
@@ -215,11 +219,12 @@ textarea::placeholder{
 
 .contenido-desktop {
   display: flex;
-  justify-content: space-evenly;
-  max-width: 80%;
-  gap: 5%;
-  padding-left: 8%;
+  justify-content: center;
+  max-width: 100%;
+  gap: 10px;
+  padding-left: 7%;
   padding-top: 2%;
+  padding-right: 2%;
 }
 
 .contenido-desktop input{
@@ -228,7 +233,7 @@ textarea::placeholder{
 }
 
 .contenido-desktop-text {
-  max-width: 80%;
+  max-width: 480px;
   text-align: left;
 }
 
@@ -294,7 +299,9 @@ textarea::placeholder{
   border-radius: 5px;
   width: 100px;
 }
-
+.footer-icon {
+  max-width: 28px;
+}
 
 .mobile-form {
   margin-top: 15%;
@@ -469,6 +476,12 @@ textarea::placeholder{
   p {
     font-size: 16px;
   }
+
+  .footer-maeva {
+  max-width: 173px;
+}
+
+
   .formulario-contacto-desktop {
     display: none;
   }
@@ -602,6 +615,9 @@ label input {
   .elegirnos-desktop{
     display: none;
   }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
 
 
 }
@@ -621,9 +637,6 @@ footer {
   justify-self: left;
 }
 
-footer img{
-  width: 10%;
-}
 
 footer div {
   text-align: left;
@@ -748,6 +761,8 @@ a{
 .first-section {
   display: none;
 }
+
+
 * {
   font-size: 20px;
 }

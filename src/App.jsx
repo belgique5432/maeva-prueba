@@ -443,15 +443,15 @@ function App() {
         <div className="footer-contacto">
           <p>Contacto</p>
           <ul>
-            <li><img src={mail} alt="mail"/><a href="mailto:info@maevaviajes.com ">info@maevaviajes.com </a></li>
-            <li><img src={wpp} alt="whatsapp" /><a href="https://wa.me/5491130059809">+54 9 11 3005-9809</a></li>
+            <li><img src={mail} alt="mail" className="footer-icon"/><a href="mailto:info@maevaviajes.com ">info@maevaviajes.com </a></li>
+            <li><img src={wpp} alt="whatsapp" className="footer-icon"/><a href="https://wa.me/5491130059809">+54 9 11 3005-9809</a></li>
           </ul>
         </div>
         <div className="footer-redes">
           <p>Redes sociales</p>
           <ul>
-            <li><img src={ig} alt="instagram" /><a href="https://www.instagram.com/maevaviajes/">@maevaviajes</a></li>
-            <li><img src={fb} alt="facebook" /><a href="">Maeva Viajes</a></li>
+            <li><img src={ig} alt="instagram" className="footer-icon"/><a href="https://www.instagram.com/maevaviajes/">@maevaviajes</a></li>
+            <li><img src={fb} alt="facebook" className="footer-icon"/><a href="">Maeva Viajes</a></li>
           </ul>
         </div>
       </footer>

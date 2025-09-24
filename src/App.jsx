@@ -12,6 +12,14 @@ import fb from "./assets/iconos/logo-facebook.svg"
 import ServiciosCarousel from "./components/slider";
 
 function App() {
+
+  function selectYear(e) {
+  const buttons = document.querySelectorAll(".year-btn");
+  buttons.forEach((btn) => btn.classList.remove("selected-year"));
+
+  e.target.classList.add("selected-year");
+  document.getElementById("anio-hidden").value = e.target.dataset.value;
+}
   return (
     <>
       <section className="first-section">
@@ -302,25 +310,26 @@ function App() {
             <option value="noviembre">Noviembre</option>
             <option value="diciembre">Diciembre</option>
           </select>
-        <div className="year">
-          <input
-            type="radio"
-            id="anio2025"
-            name="anio"
-            value="2025"
-            className="radio-fecha"
-          />
-          <label htmlFor="anio2025">2025</label>
+<div className="year">
+  <button
+    type="button"
+    className="year-btn"
+    data-value="2025"
+    onClick={(e) => selectYear(e)}
+  >
+    2025
+  </button>
 
-          <input
-            type="radio"
-            id="anio2026"
-            name="anio"
-            value="2026"
-            className="radio-fecha"
-          />
-          <label htmlFor="anio2026">2026</label>
-        </div>
+  <button
+    type="button"
+    className="year-btn"
+    data-value="2026"
+    onClick={(e) => selectYear(e)}
+  >
+    2026
+  </button>
+  <input type="hidden" name="anio" id="anio-hidden" />
+</div>
         </div>
 
         {/* Consulta */}

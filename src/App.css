@@ -47,9 +47,7 @@ input[type="radio"]:checked::before {
 }
 
 /* Oculto los radios */
-.radio-fecha {
-  display: none;
-}
+
 
 /* Estilos base para los labels (botones) */
 .year {
@@ -69,29 +67,44 @@ input[type="radio"]:checked::before {
   max-width: 40px;
 }
 
+
+
 .year label {
   display: inline-block;
-  padding: 2px 15px;
-  margin:5px;
-  border: 1px solid brown;
+  padding: 8px 16px;
+  margin: 5px;
   border-radius: 6px;
-  background-color: #fce9d6; /* mismo tono que tu fondo */
   cursor: pointer;
-  transition: all 0.3s ease;
-  width: 109px;
-  text-align: center;
+  background-color: #CEDDFF; /* color base */
+  color: #582707; /* texto base */
+  border: 1px solid #582707;
+  transition: 0.3s;
 }
 
-.year label input {
-  display: none;
-}
+
 
 /* Cuando el radio está seleccionado */
 .radio-fecha:checked + label {
   background-color: #582707;
-  color: #fce9d6;
+  color: #CEDDFF;
 }
 
+.year-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #CEDDFF; /* color base */
+  color: #582707; /* texto base */
+  border: 1px solid #582707;
+  transition: 0.2s;
+}
+
+.radio-fecha:checked + .year-btn {
+  background-color: #582707; /* cuando está seleccionado */
+  color: #CEDDFF;
+}
 
 
 textarea {
@@ -488,6 +501,24 @@ textarea {
 }
 
 @media (max-width: 640px) {
+
+.year-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #CEDDFF;
+  color: #582707;
+  border: 1px solid #582707;
+  transition: all 0.3s;
+}
+
+.year-btn.selected-year {
+  background-color: #582707;
+  color: #CEDDFF;
+}
+
+
   h1 {
     font-size: 40px;
     font-weight: bold;
@@ -520,39 +551,8 @@ textarea {
     display: none;
   }
 
-  input[type="radio"]:checked::before {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 6px;
-  width: 10px;
-  height: 10px;
-  background-color: #582707; /* Color del punto/relleno */
-  border-radius: 50%;
-}
-
-input[type="radio"] {
-  appearance: none; /* Oculta el estilo nativo */
-  width: 25px;
-  height: 25px;
-  border: 2px solid #ccc; /* Color del círculo estático */
-  border-radius: 50%;
-  position: relative;
-  border-color: #582707;
-}
 
 
-  .year label {
-  display: inline-block;
-  padding: 2px 25px;
-  border: 1px solid brown;
-  border-radius: 6px;
-  background-color: #fce9d6; /* mismo tono que tu fondo */
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 46.3%;
-  margin-top: 10px;
-}
 .select-mes {
   width: 100%;
   padding: 5px;
@@ -592,9 +592,6 @@ input[type="radio"] {
   gap: 3rem;
 }
 
-label input {
-  width: 100%;
-}
 
 .consulta-form {
   display: flex;
@@ -618,6 +615,10 @@ label input {
   .arrow {
     display:none;
   }
+
+  .radio-fecha {
+  display: none;
+}
 
     .mundi-button-mobile {
     display: none;
@@ -779,6 +780,10 @@ a{
 
 /* Pantallas grandes: desktop (1025px en adelante) */
 @media (min-width: 1025px) {
+
+  .radio-fecha {
+  display: none;
+}
 .first-section {
   display: none;
 }

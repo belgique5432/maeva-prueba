@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules"; // agregamos Autoplay
 
 // Importa los estilos de Swiper
 import "swiper/css";
@@ -25,59 +25,35 @@ export default function ServiciosCarousel() {
     <section className="servicios-desktop" style={{ position: "relative" }}>
       <h2>Servicios que ofrecemos</h2>
 
-      {/* Botones personalizados */}
-
-
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]} // agregamos Autoplay
         navigation={{
           nextEl: ".btn-next",
           prevEl: ".btn-prev",
         }}
-        pagination={{ clickable: true }}
-        spaceBetween={20}
+        autoplay={{
+          delay: 3000, // tiempo en milisegundos entre cada slide
+          disableOnInteraction: false, // sigue autoplay aunque el usuario interactúe
+        }}
         loop={true}
+        spaceBetween={20}
         slidesPerView={4}
         breakpoints={{
-          0: { slidesPerView: 1 }, // celulares
-          630: {slidesPerView: 2},
-          1025: { slidesPerView: 4 }, // tablets/desktop
+          0: { slidesPerView: 1 },
+          630: { slidesPerView: 2 },
+          1025: { slidesPerView: 4 },
         }}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img src={paquetes} alt="paquetes-turisticos" className="card-image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={viajes} alt="viajes" className="card-image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={aereos} alt="vuelos" className="card-image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={hoteles} alt="hoteles" className="card-image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={alquilerAutos} alt="alquiler-autos" className="card-image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={bodas} alt="bodas" className="card-image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={lunasdemiel} alt="luna-de-miel" className="card-image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={traslados} alt="traslados" className="card-image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={eventosDeportivos} alt="eventos-deportivos" className="card-image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={asistenciaalviajero} alt="asistencia-al-viajero" className="card-image" />
-        </SwiperSlide>
+        {[paquetes, viajes, aereos, hoteles, alquilerAutos, bodas, lunasdemiel, traslados, eventosDeportivos, asistenciaalviajero].map((img, i) => (
+          <SwiperSlide key={i}>
+            <img src={img} alt="" className="card-image" />
+          </SwiperSlide>
+        ))}
       </Swiper>
-      <button className="btn-prev"><img src={back} alt="" width="100%"/></button>
-      <button className="btn-next"><img src={go} alt="" width="100%"/></button>
+
+      <button className="btn-prev"><img src={back} alt="" width="100%" /></button>
+      <button className="btn-next"><img src={go} alt="" width="100%" /></button>
     </section>
   );
 }

@@ -400,8 +400,8 @@ textarea {
   display: flex;
   justify-content: center;
   text-align: left;
-  padding: 10%;
-  padding-top: 5%;
+  padding:  10%;
+  padding-bottom: 0%;
   margin-top: 10%;
   flex-wrap: wrap;
 }

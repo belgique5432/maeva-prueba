@@ -75,7 +75,7 @@ input[type="radio"]:checked::before {
   margin: 5px;
   border-radius: 6px;
   cursor: pointer;
-  background-color: #CEDDFF; /* color base */
+  background-color: #FFECDB; /* color base */
   color: #582707; /* texto base */
   border: 1px solid #582707;
   transition: 0.3s;
@@ -95,7 +95,7 @@ input[type="radio"]:checked::before {
   margin: 4px;
   border-radius: 6px;
   cursor: pointer;
-  background-color: #CEDDFF; /* color base */
+  background-color: #FFECDB; /* color base */
   color: #582707; /* texto base */
   border: 1px solid #582707;
   transition: 0.2s;
@@ -507,7 +507,6 @@ textarea {
   margin: 5px;
   border-radius: 6px;
   cursor: pointer;
-  background-color: #CEDDFF;
   color: #582707;
   border: 1px solid #582707;
   transition: all 0.3s;

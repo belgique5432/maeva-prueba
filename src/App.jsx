@@ -64,8 +64,7 @@ function App() {
 
   <div className="formulario-contacto-desktop">
     <form
-      action="https://formsubmit.co/seniniezequiel780@gmail.com"
-      method="POST"
+     action="https://formsubmit.co/6ee07ec4b49939738230603d4fab8a76" method="POST"
     >
       {/* configuración oculta */}
       <input
@@ -218,7 +217,7 @@ function App() {
 
     <div className="margen-top form-container">
       <form
-        action="https://formsubmit.co/seniniezequiel780@gmail.com"
+        action="https://formsubmit.co/6ee07ec4b49939738230603d4fab8a76"
         method="POST"
       >
         {/* Configuración oculta */}
@@ -402,7 +401,7 @@ function App() {
             No solo organizamos viajes: creamos experiencias que dejan huella.
           </p>
           <p className="strong-elegirnos">
-            - Nuestro servicio es 100% personalizado y a medida - Gestionamos
+            - Nuestro servicio es 100% personalizado y a medida <br />- Gestionamos
             cada paso de tu reserva
           </p>
           <p className="strong-elegirnos">Bienvenido a donde sea que vayas.</p>

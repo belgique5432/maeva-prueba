@@ -9,10 +9,10 @@ import "swiper/css/pagination";
 import back from "../assets/iconos/chevron-back.svg"
 import go from "../assets/iconos/chevron-go.svg"
 
-import paquetes from "../assets/carousel/paquetes-turisticos.png";
+import paquetes from "../assets/carousel/paquetesturisticos.png";
 import aereos from "../assets/carousel/aereos.png"
 import hoteles from "../assets/carousel/hoteles.png"
-import viajes from "../assets/carousel/viajes.png"
+import viajes from "../assets/carousel/viajesamedida.png"
 import alquilerAutos from "../assets/carousel/alquilerdeautos.png"
 import bodas from "../assets/carousel/bodas.png"
 import lunasdemiel from "../assets/carousel/lunasdemiel.png"
